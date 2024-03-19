@@ -1,0 +1,109 @@
+.header {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 120px;
+}
+ul.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+ul li {
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 400;
+  position: relative;
+}
+ul li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: var(--maincolor);
+}
+ul li:hover {
+  cursor: pointer;
+}
+.tools {
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tools .search_icon,
+.bag_icon {
+  width: 20px;
+  cursor: pointer;
+}
+.btn-signin {
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+}
+.nav-card {
+  position: relative;
+}
+.nav-card .dot {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--maincolor);
+  min-width: 10px;
+  border-radius: 10px;
+  min-height: 10px;
+  color: aliceblue;
+  font-size: 11px;
+  padding: 2px;
+}
+
+@media (max-width: 1050px) {
+  .header .logo {
+    width: 140px;
+  }
+  ul.nav {
+    gap: 20px;
+    font-size: 17px;
+  }
+  .header .tools {
+    gap: 30px;
+  }
+  .tools img {
+    width: 22px;
+  }
+  .tools button {
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header .logo {
+    width: 120px;
+  }
+  ul.nav {
+    gap: 15px;
+    font-size: 16px;
+  }
+  .header .tools {
+    gap: 20px;
+  }
+  .tools img {
+    width: 20px;
+  }
+  .tools button {
+    padding: 7px 20px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 750px) {
+  ul.nav {
+    display: none;
+  }
+}
